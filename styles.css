@@ -43,6 +43,10 @@ main{
     position: relative;
     margin: 0;
     width: 100%;
+    background-color: var(--Cyan);
+    &:hover{
+        opacity: 0.7;
+    }
 }
 
 .main__figure img {
