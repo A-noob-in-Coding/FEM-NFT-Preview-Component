@@ -1,0 +1,148 @@
+:root{    
+--Soft-blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+--Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+--Very-dark-bluecard-BG: hsl(216, 50%, 16%);
+--Very-dark-blue-line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Outfit";
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-dark-blue-main-BG);
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main{
+    padding: 1rem;
+    width: 25%;
+    background-color: var(--Very-dark-bluecard-BG);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.main__figure{
+    margin: 0;
+    width: 100%;
+    &:hover{
+        background-color: var(--Cyan);
+    }
+    img:hover{
+
+        cursor: pointer;
+        opacity: 0.5;
+        background-color: var(--Cyan);
+    }
+}
+
+main{
+    color: var(--White);
+}
+
+.main__nft-title{
+
+    font-weight: bolder;
+    font-size: 1.5rem;
+    &:hover{
+        color: var(--Cyan);
+        cursor: pointer;
+    }
+}
+
+.main__nft-description{
+    font-weight: lighter;
+}
+
+.main__price-time{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+.main__price {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Cyan);
+}
+
+.main__price::before {
+    content: url("/images/icon-ethereum.svg");
+    display: flex;
+    align-items: center;
+    padding-right: 0.5rem;
+}
+
+.main__time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__time::before {
+    content: url("/images/icon-clock.svg");
+    padding-right: 0.5rem;
+}
+
+.main__made-by {
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    width: 15%;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.main__made-by figcaption {
+    white-space: nowrap;
+    font-weight: lighter;
+    padding-left: 0.5rem;
+    span{
+        font-weight: bold;
+        &:hover{
+            color: var(--Cyan);
+            cursor: pointer;
+        }
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    main{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    main{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    main{
+        width: 25%;
+    }
+    
+}
