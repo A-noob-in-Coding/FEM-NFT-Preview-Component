@@ -39,18 +39,36 @@ main{
     gap: 1rem;
 }
 
-.main__figure{
+.main__figure {
+    position: relative;
     margin: 0;
     width: 100%;
-    &:hover{
-        background-color: var(--Cyan);
-    }
-    img:hover{
+}
 
-        cursor: pointer;
-        opacity: 0.5;
-        background-color: var(--Cyan);
-    }
+.main__figure img {
+    width: 100%;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.main__figure::after {
+    content: url("/images/icon-view.svg");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.main__figure img:hover {
+    background-color: var(--Cyan);
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.main__figure:hover::after {
+    opacity: 1;
 }
 
 main{
